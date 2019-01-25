@@ -30,4 +30,7 @@ class gv {
   // Since Navigator.push will called the initState TWICE
   // This variable make sure the initState only called once!
   static bool gbolNavigatorBeingPushed = false;
+
+  // A variable control the Text Field in Page 2
+  static var gctlPage2Text = TextEditingController();
 }

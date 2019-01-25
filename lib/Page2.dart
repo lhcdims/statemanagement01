@@ -35,7 +35,7 @@ class _ClsPage2State extends State<ClsPage2> {
       appBar: PreferredSize(
         child: AppBar(
           title: Text(
-            'Page 2 Dynamic Page',
+            'Page 2 Dynamic Page with a Text Field',
             style: TextStyle(fontSize: sv.dblDefaultFontSize),
           ),
         ),
@@ -68,7 +68,7 @@ class _ClsPage2State extends State<ClsPage2> {
                       Text('     '),
                       Expanded(
                         child: TextFormField(
-                          controller: ctlUserID,
+                          controller: gv.gctlPage2Text,
                           keyboardType: TextInputType.text,
                           autofocus: false,
                           decoration: InputDecoration(
