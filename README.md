@@ -2,15 +2,46 @@
 
 State Management Example 01
 
-## Getting Started
+In a complex app, sometimes a Global Variable 'attached' to a widget, can be changed by some 'EXTERNAL EVENT' such as (1) A timer that run in another thread, or (2) socket.io server emit event (3) Others ......
 
-This project is a starting point for a Flutter application.
+Let's call this global variable gintCount and the app has 3 pages, namely:
 
-A few resources to get you started if this is your first Flutter project:
+Page 1: A 'Dynamic' page that need to display the latest value of gintCount.
 
-- [Lab: Write your first Flutter app](https://flutter.io/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.io/docs/cookbook)
+Page 2: Another 'Dynamic' page that need to display the latest value of gintCount, with a Text Input Field.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.io/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+Page 3: A 'Static' page that do nothing when gintCount changes.
+
+
+Suppose the user is doing something in Page 1 or Page 2, when and where should we 'Refresh' the page to display the latest value that may/might be changed by EXTERNAL event?
+
+I read the other Q&A in stackoverflow and it is said that there are 4 ways for the State Management of Flutter, they are namely:
+
+Using setState
+
+Using ScopedModal
+
+Using Rxdart with BLoC
+
+Using Redux
+
+
+Since I'm a newbie in Flutter, I am completely lost in 2 to 4, so I've build an app using no. 1, i.e. setState. to demonstrate how we can manage states in flutter. And I hope, in the future, I am able to (or somebody else) provide answers by using no. 2 to 4.
+
+
+## To create this App Manually
+
+1. Download the zip file from github
+
+2. Create a new Flutter App in Android Studio.
+
+3. In file pubspec.yaml,include the following lines after dependencies:
+
+  threading:
+
+
+4. 'Tools' ->  'Flutter' -> 'Flutter Packages Get'
+
+5. Copy all the dart files from the zip file to your 'lib' directory
+
+6. Run the app in emulator or device.

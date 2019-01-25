@@ -1,36 +1,17 @@
-// This program stores ALL global variables required by ALL darts
-
-// Import Flutter Darts
 import 'package:flutter/material.dart';
-
-// Import Self Darts
-
-// Import Pages
-
 class gv {
-  // Current Page
-  // gstrCurPage stores the Current Page to be loaded
-  static var gstrCurPage = 'page1';
+  static var gstrCurPage = 'page1'; // gstrCurPage stores the Current Page to be loaded
 
-  // Init gintBottomIndex
-  // i.e. Which Tab is selected in the Bottom Navigator Bar
-  static var gintBottomIndex = 0;
+  static var gintBottomIndex = 0; // Which Tab is selected in the Bottom Navigator Bar
 
-  // A Global Counter gintCount
-  // gintCountLast is to keep track whether the gintCount has been changed
-  static var gintCount = 0;
-  static var gintCountLast = 0;
+  static var gintCount = 0; // The Global Counter
+  static var gintCountLast = 0; // Check whether Global Counter has been changed
 
+  static var gintPage1Counter = 0; // No. of initState called in Page 1
+  static var gintPage2Counter = 0; // No. of initState called in Page 2
+  static var gintPage3Counter = 0; // No. of initState called in Page 3
 
-  // A Counter for Number of Refresb
-  static var gintPage1Counter = 0;
-  static var gintPage2Counter = 0;
-  static var gintPage3Counter = 0;
+  static bool gbolNavigatorBeingPushed = false; // Since Navigator.push will called the initState TWICE, this variable make sure the initState only be called once effectively!
 
-  // Since Navigator.push will called the initState TWICE
-  // This variable make sure the initState only called once!
-  static bool gbolNavigatorBeingPushed = false;
-
-  // A variable control the Text Field in Page 2
-  static var gctlPage2Text = TextEditingController();
+  static var gctlPage2Text = TextEditingController(); // Controller for the text field in Page 2
 }
