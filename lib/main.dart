@@ -56,12 +56,15 @@ class _MyAppState extends State<MyApp> {
         gv.gintCountLast = gv.gintCount;
         switch (gv.gstrCurPage) {
           case 'page1':
+            print('Page 1 Global Counter: ' + gv.gintCount.toString());
             setState(() {});              // Page 1: Refresh Page
             break;
           case 'page2':
+            print('Page 2 Global Counter: ' + gv.gintCount.toString());
             setState(() {});              // Page 2: Refresh Page
             break;
           default:              // Page 3: Do Nothing, since Page 3 is static
+            print('Page 3 Global Counter: ' + gv.gintCount.toString());
             break;
         }
       }
